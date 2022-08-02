@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "90832050875",
+    "project_id": "good-will-punting",
+    "storage_bucket": "good-will-punting.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90832050875:android:d737c04b390593999b279e",
+        "android_client_info": {
+          "package_name": "com.beanvelopment.goodwillpunting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90832050875-feo3t2i408qh82oliuhoilav6c85ldr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beanvelopment.goodwillpunting",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "90832050875-ctorag9ilhchqva0sqhirkog2crgapf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCci5fkOvXBiLmcgvUSHE7ttd4ISWM1xkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90832050875-ctorag9ilhchqva0sqhirkog2crgapf3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "90832050875-8vvasr1p718648mkb5cqio614ntv558s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.beanvelopment.goodwillpunting"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
