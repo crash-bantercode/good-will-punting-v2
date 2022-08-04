@@ -14,12 +14,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
 class PuntViewPlaceWidget extends StatefulWidget {
-  const PuntViewPlaceWidget({
-    Key key,
-    this.punt,
-  }) : super(key: key);
+  const PuntViewPlaceWidget({Key key, this.punt, this.club}) : super(key: key);
 
   final PuntsRecord punt;
+  final ClubsRecord club;
 
   @override
   _PuntViewPlaceWidgetState createState() => _PuntViewPlaceWidgetState();
@@ -334,6 +332,11 @@ class _PuntViewPlaceWidgetState extends State<PuntViewPlaceWidget> {
                               ),
                               placed: true,
                             );
+                            final clubUpdateData = {
+                              'season_winnings':
+                                  FieldValue.increment(-(double.parse(stakeController.text)))
+                            };
+                            await widget.club.reference.update(clubUpdateData);
                             await widget.punt.reference.update(puntsUpdateData);
                             await Navigator.push(
                               context,
@@ -388,13 +391,13 @@ class _PuntViewPlaceWidgetState extends State<PuntViewPlaceWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: FFButtonWidget(
                         onPressed: () async {
+                          await widget.punt.reference.delete();
                           await Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => ManagePuntsWidget(),
                             ),
                           );
-                          await widget.punt.reference.delete();
                         },
                         text: 'Discard',
                         icon: FaIcon(

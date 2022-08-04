@@ -1,0 +1,185 @@
+Date : 2022-08-04 19:47:46
+Directory : c:\Users\jarry\Dev\Flutter\good-will-punting-v2
+Total : 102 files,  15341 codes, 252 comments, 885 blanks, all 16478 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         76 |     14,551 |        143 |        786 |     15,480 |
+| JSON       |          5 |        374 |          0 |          3 |        377 |
+| XML        |          9 |        131 |         44 |         16 |        191 |
+| Groovy     |          3 |        111 |          3 |         25 |        139 |
+| YAML       |          1 |         69 |         44 |         17 |        130 |
+| HTML       |          1 |         41 |         15 |         11 |         67 |
+| Swift      |          2 |         32 |          2 |          9 |         43 |
+| Markdown   |          2 |         22 |          0 |         15 |         37 |
+| Properties |          2 |          9 |          1 |          2 |         12 |
+| C++        |          1 |          1 |          0 |          1 |          2 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |        102 |     15,341 |        252 |        885 |     16,478 |
+| android                                                                                                       |         13 |        244 |         46 |         41 |        331 |
+| android\app                                                                                                   |          9 |        188 |         45 |         28 |        261 |
+| android\app\src                                                                                               |          7 |         70 |         42 |         14 |        126 |
+| android\app\src\debug                                                                                         |          1 |          4 |          3 |          1 |          8 |
+| android\app\src\main                                                                                          |          5 |         62 |         36 |         12 |        110 |
+| android\app\src\main\res                                                                                      |          4 |         26 |         25 |          5 |         56 |
+| android\app\src\main\res\drawable                                                                             |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                                               |          2 |         13 |          9 |          2 |         24 |
+| android\app\src\main\res\values-night                                                                         |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                                       |          1 |          4 |          3 |          1 |          8 |
+| android\gradle                                                                                                |          1 |          5 |          1 |          1 |          7 |
+| android\gradle\wrapper                                                                                        |          1 |          5 |          1 |          1 |          7 |
+| ios                                                                                                           |          8 |        242 |          4 |         16 |        262 |
+| ios\ImageNotification                                                                                         |          1 |         20 |          2 |          6 |         28 |
+| ios\Runner                                                                                                    |          7 |        222 |          2 |         10 |        234 |
+| ios\Runner\Assets.xcassets                                                                                    |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                                 |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                                               |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                                         |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                                           |         76 |     14,695 |        136 |        782 |     15,613 |
+| lib\auth                                                                                                      |          7 |        274 |         32 |         54 |        360 |
+| lib\auth_page                                                                                                 |          1 |      1,052 |          1 |         10 |      1,063 |
+| lib\backend                                                                                                   |         16 |      2,879 |         36 |        363 |      3,278 |
+| lib\backend\firebase_storage                                                                                  |          1 |          9 |          0 |          3 |         12 |
+| lib\backend\schema                                                                                            |         14 |      2,557 |         30 |        332 |      2,919 |
+| lib\club_check                                                                                                |          1 |         53 |          1 |          6 |         60 |
+| lib\club_landing                                                                                              |          1 |        821 |          0 |         12 |        833 |
+| lib\club_management                                                                                           |          1 |        233 |          1 |          5 |        239 |
+| lib\components                                                                                                |         12 |      1,610 |          2 |         64 |      1,676 |
+| lib\custom_code                                                                                               |          8 |        158 |         20 |         24 |        202 |
+| lib\custom_code\actions                                                                                       |          8 |        158 |         20 |         24 |        202 |
+| lib\dashboard                                                                                                 |          1 |        888 |          5 |          5 |        898 |
+| lib\donate                                                                                                    |          1 |        468 |          1 |          8 |        477 |
+| lib\donation_view_edit                                                                                        |          1 |        571 |          2 |         14 |        587 |
+| lib\flutter_flow                                                                                              |         10 |        975 |          3 |        111 |      1,089 |
+| lib\leaderboards                                                                                              |          1 |        464 |          4 |          5 |        473 |
+| lib\manage_donations                                                                                          |          1 |        315 |          3 |          5 |        323 |
+| lib\manage_punts                                                                                              |          1 |        488 |          7 |          5 |        500 |
+| lib\monitor_fees                                                                                              |          1 |        166 |          2 |          5 |        173 |
+| lib\profile                                                                                                   |          1 |        466 |          2 |          5 |        473 |
+| lib\punt                                                                                                      |          1 |        342 |          2 |          7 |        351 |
+| lib\punt_view_edit                                                                                            |          1 |        407 |          1 |         13 |        421 |
+| lib\punt_view_place                                                                                           |          1 |        423 |          1 |          7 |        431 |
+| lib\season                                                                                                    |          1 |        532 |          1 |          8 |        541 |
+| lib\team_edit                                                                                                 |          1 |        262 |          1 |          6 |        269 |
+| lib\team_members_edit                                                                                         |          1 |        145 |          1 |          6 |        152 |
+| lib\teams                                                                                                     |          1 |        203 |          2 |          5 |        210 |
+| lib\user_history                                                                                              |          1 |        371 |          3 |          5 |        379 |
+| test                                                                                                          |          1 |          8 |          7 |          4 |         19 |
+| web                                                                                                           |          2 |         64 |         15 |         12 |         91 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                      | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\README.md                                                     | Markdown   |         19 |          0 |         13 |         32 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\build.gradle                                      | Groovy     |         64 |          3 |         14 |         81 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\google-services.json                              | JSON       |         54 |          0 |          0 |         54 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\debug\AndroidManifest.xml                     | XML        |          4 |          3 |          1 |          8 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\main\AndroidManifest.xml                      | XML        |         36 |         11 |          7 |         54 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\main\res\drawable\launch_background.xml       | XML        |          4 |          7 |          2 |         13 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\main\res\values-night\styles.xml              | XML        |          9 |          9 |          1 |         19 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\main\res\values\strings.xml                   | XML        |          4 |          0 |          1 |          5 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\main\res\values\styles.xml                    | XML        |          9 |          9 |          1 |         19 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\app\src\profile\AndroidManifest.xml                   | XML        |          4 |          3 |          1 |          8 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\build.gradle                                          | Groovy     |         28 |          0 |          5 |         33 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\gradle.properties                                     | Properties |          4 |          0 |          1 |          5 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\gradle\wrapper\gradle-wrapper.properties              | Properties |          5 |          1 |          1 |          7 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\android\settings.gradle                                       | Groovy     |         19 |          0 |          6 |         25 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\ImageNotification\NotificationService.swift               | Swift      |         20 |          2 |          6 |         28 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\AppDelegate.swift                                  | Swift      |         12 |          0 |          3 |         15 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON       |        122 |          0 |          1 |        123 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json | JSON       |         23 |          0 |          1 |         24 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md     | Markdown   |          3 |          0 |          2 |          5 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\Base.lproj\LaunchScreen.storyboard                 | XML        |         36 |          1 |          1 |         38 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\Base.lproj\Main.storyboard                         | XML        |         25 |          1 |          1 |         27 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\ios\Runner\Runner-Bridging-Header.h                           | C++        |          1 |          0 |          1 |          2 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\app_state.dart                                            | Dart       |         28 |          0 |          8 |         36 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\anonymous_auth.dart                                  | Dart       |          7 |          0 |          3 |         10 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\apple_auth.dart                                      | Dart       |         44 |         12 |         11 |         67 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\auth_util.dart                                       | Dart       |        160 |         19 |         24 |        203 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\email_auth.dart                                      | Dart       |         15 |          0 |          4 |         19 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\firebase_user_provider.dart                          | Dart       |         17 |          0 |          3 |         20 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\google_auth.dart                                     | Dart       |         23 |          1 |          6 |         30 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth\jwt_token_auth.dart                                  | Dart       |          8 |          0 |          3 |         11 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\auth_page\auth_page_widget.dart                           | Dart       |      1,052 |          1 |         10 |      1,063 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\backend.dart                                      | Dart       |        313 |          6 |         28 |        347 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\firebase_storage\storage.dart                     | Dart       |          9 |          0 |          3 |         12 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\clubs_record.dart                          | Dart       |         96 |          0 |         23 |        119 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\clubs_record.g.dart                        | Dart       |        364 |          5 |         37 |        406 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\donations_record.dart                      | Dart       |        102 |          0 |         26 |        128 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\donations_record.g.dart                    | Dart       |        396 |          5 |         38 |        439 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\firestore.indexes.json                     | JSON       |        152 |          0 |          0 |        152 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\index.dart                                 | Dart       |          4 |          0 |          1 |          5 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\punts_record.dart                          | Dart       |         95 |          0 |         24 |        119 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\punts_record.g.dart                        | Dart       |        388 |          5 |         38 |        431 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\serializers.dart                           | Dart       |        109 |          0 |         24 |        133 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\serializers.g.dart                         | Dart       |          8 |          5 |          5 |         18 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\teams_record.dart                          | Dart       |         78 |          0 |         21 |         99 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\teams_record.g.dart                        | Dart       |        276 |          5 |         33 |        314 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\users_record.dart                          | Dart       |         99 |          0 |         24 |        123 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\backend\schema\users_record.g.dart                        | Dart       |        390 |          5 |         38 |        433 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\club_check\club_check_widget.dart                         | Dart       |         53 |          1 |          6 |         60 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\club_landing\club_landing_widget.dart                     | Dart       |        821 |          0 |         12 |        833 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\club_management\club_management_widget.dart               | Dart       |        233 |          1 |          5 |        239 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\confirm_donation_widget.dart                   | Dart       |        124 |          0 |          5 |        129 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\create_team_bottom_widget.dart                 | Dart       |        243 |          0 |          8 |        251 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\donation_tile_widget.dart                      | Dart       |        155 |          1 |          5 |        161 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\edit_team_bottom_widget.dart                   | Dart       |        205 |          0 |          7 |        212 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\member_add_tile_widget.dart                    | Dart       |        102 |          0 |          5 |        107 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\member_fees_tile_widget.dart                   | Dart       |        108 |          0 |          5 |        113 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\member_tile_widget.dart                        | Dart       |        137 |          1 |          5 |        143 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\punt_tile_history_widget.dart                  | Dart       |        152 |          0 |          5 |        157 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\punt_tile_widget.dart                          | Dart       |        108 |          0 |          5 |        113 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\setting_tile_widget.dart                       | Dart       |         74 |          0 |          5 |         79 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\submit_punt_bottom_widget.dart                 | Dart       |        133 |          0 |          4 |        137 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\components\teams_tile_widget.dart                         | Dart       |         69 |          0 |          5 |         74 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\advance_week.dart                     | Dart       |         19 |          2 |          3 |         24 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\extract_club_code.dart                | Dart       |          9 |          2 |          2 |         13 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\generate_club_code.dart               | Dart       |         12 |          2 |          2 |         16 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\get_club.dart                         | Dart       |         17 |          2 |          4 |         23 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\get_team.dart                         | Dart       |         33 |          2 |          4 |         39 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\index.dart                            | Dart       |          7 |          0 |          1 |          8 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\new_season.dart                       | Dart       |         38 |          2 |          5 |         45 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\custom_code\actions\team_exists.dart                      | Dart       |         23 |          8 |          3 |         34 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\dashboard\dashboard_widget.dart                           | Dart       |        888 |          5 |          5 |        898 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\donate\donate_widget.dart                                 | Dart       |        468 |          1 |          8 |        477 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\donation_view_edit\donation_view_edit_widget.dart         | Dart       |        571 |          2 |         14 |        587 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\custom_functions.dart                        | Dart       |         68 |          0 |         13 |         81 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\flutter_flow_expanded_image_view.dart        | Dart       |         61 |          0 |          4 |         65 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\flutter_flow_theme.dart                      | Dart       |        177 |          1 |         14 |        192 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\flutter_flow_toggle_icon.dart                | Dart       |         18 |          0 |          4 |         22 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\flutter_flow_util.dart                       | Dart       |        188 |          0 |         24 |        212 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\flutter_flow_widgets.dart                    | Dart       |        158 |          0 |         12 |        170 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\internationalization.dart                    | Dart       |         32 |          0 |         13 |         45 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\lat_lng.dart                                 | Dart       |         15 |          0 |          5 |         20 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\place.dart                                   | Dart       |         41 |          0 |          6 |         47 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\flutter_flow\upload_media.dart                            | Dart       |        217 |          2 |         16 |        235 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\index.dart                                                | Dart       |         23 |          1 |          1 |         25 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\leaderboards\leaderboards_widget.dart                     | Dart       |        464 |          4 |          5 |        473 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\main.dart                                                 | Dart       |         78 |          1 |         15 |         94 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\manage_donations\manage_donations_widget.dart             | Dart       |        315 |          3 |          5 |        323 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\manage_punts\manage_punts_widget.dart                     | Dart       |        488 |          7 |          5 |        500 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\monitor_fees\monitor_fees_widget.dart                     | Dart       |        166 |          2 |          5 |        173 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\profile\profile_widget.dart                               | Dart       |        466 |          2 |          5 |        473 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\punt\punt_widget.dart                                     | Dart       |        342 |          2 |          7 |        351 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\punt_view_edit\punt_view_edit_widget.dart                 | Dart       |        407 |          1 |         13 |        421 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\punt_view_place\punt_view_place_widget.dart               | Dart       |        423 |          1 |          7 |        431 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\season\season_widget.dart                                 | Dart       |        532 |          1 |          8 |        541 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\team_edit\team_edit_widget.dart                           | Dart       |        262 |          1 |          6 |        269 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\team_members_edit\team_members_edit_widget.dart           | Dart       |        145 |          1 |          6 |        152 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\teams\teams_widget.dart                                   | Dart       |        203 |          2 |          5 |        210 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\lib\user_history\user_history_widget.dart                     | Dart       |        371 |          3 |          5 |        379 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\pubspec.yaml                                                  | YAML       |         69 |         44 |         17 |        130 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\test\widget_test.dart                                         | Dart       |          8 |          7 |          4 |         19 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\web\index.html                                                | HTML       |         41 |         15 |         11 |         67 |
+| c:\Users\jarry\Dev\Flutter\good-will-punting-v2\web\manifest.json                                             | JSON       |         23 |          0 |          1 |         24 |
+| Total                                                                                                         |            |     15,341 |        252 |        885 |     16,478 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

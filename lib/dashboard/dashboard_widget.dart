@@ -33,7 +33,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+            padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 20),
             child: AuthUserStreamWidget(
               child: StreamBuilder<ClubsRecord>(
                 stream: ClubsRecord.getDocument(currentUserDocument?.clubRef),
@@ -124,12 +124,12 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Season Winnings',
+                              'Season Kitty',
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -146,8 +146,12 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              columnClubsRecord.seasonWinnings?.toString(),
-                              '0',
+                              formatNumber(columnClubsRecord.seasonWinnings,
+                                formatType: FormatType.decimal,
+                                decimalType: DecimalType.automatic,
+                                currency: '\$',
+                              ),
+                              '0.0',
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .bodyText1
@@ -306,7 +310,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -226,6 +226,8 @@ class _ManagePuntsWidgetState extends State<ManagePuntsWidget> {
                                                                         PuntViewPlaceWidget(
                                                                   punt:
                                                                       listViewPuntsRecord,
+                                                                  club: 
+                                                                      managePuntsClubsRecord,
                                                                 ),
                                                               ),
                                                             );
