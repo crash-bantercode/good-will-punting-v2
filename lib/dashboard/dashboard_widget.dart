@@ -108,15 +108,15 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                                     ),
                                   if (valueOrDefault<bool>(
                                       currentUserDocument?.clubOwner, false))
-                                  Text(
-                                    'Manager',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lexend Deca',
-                                          fontSize: 10,
-                                        ),
-                                  ),
+                                    Text(
+                                      'Manager',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Lexend Deca',
+                                            fontSize: 10,
+                                          ),
+                                    ),
                                 ],
                               ),
                             ],
@@ -146,7 +146,8 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              formatNumber(columnClubsRecord.seasonWinnings,
+                              formatNumber(
+                                columnClubsRecord.seasonWinnings,
                                 formatType: FormatType.decimal,
                                 decimalType: DecimalType.automatic,
                                 currency: '\$',
@@ -473,48 +474,70 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               ),
                               child: InkWell(
                                 onTap: () async {
-                                  if (columnClubsRecord.seasonActive) {
-                                    await showModalBottomSheet(
-                                      isScrollControlled: true,
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                      barrierColor: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      context: context,
-                                      builder: (context) {
-                                        return Padding(
-                                          padding:
-                                              MediaQuery.of(context).viewInsets,
-                                          child: Container(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.4,
-                                            child: SubmitPuntBottomWidget(),
-                                          ),
-                                        );
-                                      },
-                                    );
+                                  if (currentUserDocument.teamRef != null) {
+                                    if (columnClubsRecord.seasonActive) {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primaryBackground,
+                                        barrierColor:
+                                            FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                        context: context,
+                                        builder: (context) {
+                                          return Padding(
+                                            padding: MediaQuery.of(context)
+                                                .viewInsets,
+                                            child: Container(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.4,
+                                              child: SubmitPuntBottomWidget(),
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    } else {
+                                      await showDialog(
+                                        context: context,
+                                        builder: (alertDialogContext) {
+                                          return AlertDialog(
+                                            title: Text('It\'s Off-Season'),
+                                            content: Text(
+                                                'You\'re in the off-season, friend. Take this time to spend treasured moments with your loved ones and reduce your amount of screen time.'),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () => Navigator.pop(
+                                                    alertDialogContext),
+                                                child: Text('Ok'),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                      return;
+                                    }
                                   } else {
                                     await showDialog(
-                                      context: context,
-                                      builder: (alertDialogContext) {
-                                        return AlertDialog(
-                                          title: Text('It\'s Off-Season'),
-                                          content: Text(
-                                              'You\'re in the off-season, friend. Take this time to spend treasured moments with your loved ones and reduce your amount of screen time.'),
-                                          actions: [
-                                            TextButton(
-                                              onPressed: () => Navigator.pop(
-                                                  alertDialogContext),
-                                              child: Text('Ok'),
-                                            ),
-                                          ],
-                                        );
-                                      },
-                                    );
-                                    return;
+                                        context: context,
+                                        builder: (alertDialogContext) {
+                                          return AlertDialog(
+                                            title: Text('No Team... Loser'),
+                                            content: Text(
+                                                'Looks like you\'ve been removed from your team. Chat to your club manager about this, lol.'),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () => Navigator.pop(
+                                                    alertDialogContext),
+                                                child: Text('Ok'),
+                                              ),
+                                            ],
+                                          );
+                                        },
+                                      );
+                                      return;
                                   }
                                 },
                                 child: Column(

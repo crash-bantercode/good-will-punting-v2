@@ -369,13 +369,17 @@ class _SeasonWidgetState extends State<SeasonWidget> {
                                                         },
                                                       ) ??
                                                       false;
-
-                                              final clubsUpdateData =
-                                                  createClubsRecordData(
-                                                seasonActive: false,
-                                              );
-                                              await seasonClubsRecord.reference
-                                                  .update(clubsUpdateData);
+                                              if (confirmDialogResponse) {
+                                                final clubsUpdateData =
+                                                    createClubsRecordData(
+                                                  seasonActive: false,
+                                                );
+                                                await seasonClubsRecord
+                                                    .reference
+                                                    .update(clubsUpdateData);
+                                              } else {
+                                                return;
+                                              }
                                             },
                                             child: Container(
                                               width: MediaQuery.of(context)
@@ -457,21 +461,25 @@ class _SeasonWidgetState extends State<SeasonWidget> {
                                                         },
                                                       ) ??
                                                       false;
-
-                                              final clubsUpdateData = {
-                                                ...createClubsRecordData(
-                                                  seasonActive: true,
-                                                  seasonWinnings: 0.0,
-                                                  seasonWeek: 0,
-                                                ),
-                                                'season':
-                                                    FieldValue.increment(1),
-                                              };
-                                              await seasonClubsRecord.reference
-                                                  .update(clubsUpdateData);
-                                              await actions.newSeason(
-                                                seasonClubsRecord.clubCode,
-                                              );
+                                              if (confirmDialogResponse) {
+                                                final clubsUpdateData = {
+                                                  ...createClubsRecordData(
+                                                    seasonActive: true,
+                                                    seasonWinnings: 0.0,
+                                                    seasonWeek: 0,
+                                                  ),
+                                                  'season':
+                                                      FieldValue.increment(1),
+                                                };
+                                                await seasonClubsRecord
+                                                    .reference
+                                                    .update(clubsUpdateData);
+                                                await actions.newSeason(
+                                                  seasonClubsRecord.clubCode,
+                                                );
+                                              } else {
+                                                return;
+                                              }
                                             },
                                             child: Container(
                                               width: MediaQuery.of(context)

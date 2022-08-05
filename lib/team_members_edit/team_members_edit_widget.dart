@@ -94,41 +94,50 @@ class _TeamMembersEditWidgetState extends State<TeamMembersEditWidget> {
                     children: [],
                   ),
                 ),
-                AuthUserStreamWidget(
-                  child: StreamBuilder<List<UsersRecord>>(
-                    stream: queryUsersRecord(
-                      queryBuilder: (usersRecord) => usersRecord
-                          .where('club_ref', isEqualTo: widget.team.clubRef),
-                    ),
-                    builder: (context, snapshot) {
-                      // Customize what your widget looks like when it's loading.
-                      if (!snapshot.hasData) {
-                        return Center(
-                          child: SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: CircularProgressIndicator(
-                              color: FlutterFlowTheme.of(context).primaryColor,
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  height: MediaQuery.of(context).size.height * 0.7,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                  child: AuthUserStreamWidget(
+                    child: StreamBuilder<List<UsersRecord>>(
+                      stream: queryUsersRecord(
+                        queryBuilder: (usersRecord) => usersRecord
+                            .where('club_ref', isEqualTo: widget.team.clubRef),
+                      ),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50,
+                              height: 50,
+                              child: CircularProgressIndicator(
+                                color:
+                                    FlutterFlowTheme.of(context).primaryColor,
+                              ),
                             ),
-                          ),
-                        );
-                      }
-                      List<UsersRecord> listViewUsersRecordList = snapshot.data;
-                      return ListView.builder(
-                        padding: EdgeInsets.zero,
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        itemCount: listViewUsersRecordList.length,
-                        itemBuilder: (context, listViewIndex) {
-                          final listViewUsersRecord =
-                              listViewUsersRecordList[listViewIndex];
-                          return MemberAddTileWidget(
-                            user: listViewUsersRecord,
-                            team: widget.team,
                           );
-                        },
-                      );
-                    },
+                        }
+                        List<UsersRecord> listViewUsersRecordList =
+                            snapshot.data;
+                        return ListView.builder(
+                          padding: EdgeInsets.zero,
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          itemCount: listViewUsersRecordList.length,
+                          itemBuilder: (context, listViewIndex) {
+                            final listViewUsersRecord =
+                                listViewUsersRecordList[listViewIndex];
+                            return MemberAddTileWidget(
+                              user: listViewUsersRecord,
+                              team: widget.team,
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ),
                 ),
                 Padding(

@@ -318,7 +318,7 @@ class _DonateWidgetState extends State<DonateWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.35,
+                                      MediaQuery.of(context).size.height * 0.25,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
@@ -338,6 +338,7 @@ class _DonateWidgetState extends State<DonateWidget> {
                                   ),
                                 ),
                               ),
+                              Spacer(),
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),

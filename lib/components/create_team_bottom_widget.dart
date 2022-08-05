@@ -129,23 +129,7 @@ class _CreateTeamBottomWidgetState extends State<CreateTeamBottomWidget> {
                 if (textController1.text != null &&
                     textController1.text != '') {
                   if (textController2.text != null &&
-                      textController2.text != '') {
-                    await showDialog(
-                      context: context,
-                      builder: (alertDialogContext) {
-                        return AlertDialog(
-                          title: Text('True true'),
-                          actions: [
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pop(alertDialogContext),
-                              child: Text('Ok'),
-                            ),
-                          ],
-                        );
-                      },
-                    );
-
+                      textController2.text != '') {                  
                     final teamsCreateData = createTeamsRecordData(
                       teamName: textController1.text,
                       teamShortName: textController2.text,
@@ -162,7 +146,7 @@ class _CreateTeamBottomWidgetState extends State<CreateTeamBottomWidget> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         content: Text(
-                          'Donation submitted!',
+                          'Team created!',
                           style: TextStyle(
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
@@ -175,21 +159,6 @@ class _CreateTeamBottomWidgetState extends State<CreateTeamBottomWidget> {
                     );
                     return;
                   } else {
-                    await showDialog(
-                      context: context,
-                      builder: (alertDialogContext) {
-                        return AlertDialog(
-                          title: Text('True false'),
-                          actions: [
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pop(alertDialogContext),
-                              child: Text('Ok'),
-                            ),
-                          ],
-                        );
-                      },
-                    );
                     Navigator.pop(context);
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
@@ -224,7 +193,7 @@ class _CreateTeamBottomWidgetState extends State<CreateTeamBottomWidget> {
               },
               text: 'Create Team',
               icon: FaIcon(
-                FontAwesomeIcons.plusCircle,
+                FontAwesomeIcons.circlePlus,
               ),
               options: FFButtonOptions(
                 width: double.infinity,

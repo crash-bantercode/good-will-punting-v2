@@ -109,54 +109,52 @@ class _MonitorFeesWidgetState extends State<MonitorFeesWidget> {
                                   ),
                         ),
                       ),
-                      SingleChildScrollView(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                              child: StreamBuilder<List<UsersRecord>>(
-                                stream: queryUsersRecord(
-                                  queryBuilder: (usersRecord) =>
-                                      usersRecord.where('club_ref',
-                                          isEqualTo:
-                                              monitorFeesClubsRecord.reference),
-                                ),
-                                builder: (context, snapshot) {
-                                  // Customize what your widget looks like when it's loading.
-                                  if (!snapshot.hasData) {
-                                    return Center(
-                                      child: SizedBox(
-                                        width: 50,
-                                        height: 50,
-                                        child: CircularProgressIndicator(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                        ),
-                                      ),
-                                    );
-                                  }
-                                  List<UsersRecord> listViewUsersRecordList =
-                                      snapshot.data;
-                                  return ListView.builder(
-                                    padding: EdgeInsets.zero,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.vertical,
-                                    itemCount: listViewUsersRecordList.length,
-                                    itemBuilder: (context, listViewIndex) {
-                                      final listViewUsersRecord =
-                                          listViewUsersRecordList[
-                                              listViewIndex];
-                                      return MemberFeesTileWidget(
-                                        user: listViewUsersRecord,
-                                      );
-                                    },
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          height: MediaQuery.of(context).size.height * 0.7,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                          ),
+                          child: StreamBuilder<List<UsersRecord>>(
+                            stream: queryUsersRecord(
+                              queryBuilder: (usersRecord) => usersRecord.where(
+                                  'club_ref',
+                                  isEqualTo: monitorFeesClubsRecord.reference),
+                            ),
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50,
+                                    height: 50,
+                                    child: CircularProgressIndicator(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                    ),
+                                  ),
+                                );
+                              }
+                              List<UsersRecord> listViewUsersRecordList =
+                                  snapshot.data;
+                              return ListView.builder(
+                                padding: EdgeInsets.zero,
+                                shrinkWrap: true,
+                                scrollDirection: Axis.vertical,
+                                itemCount: listViewUsersRecordList.length,
+                                itemBuilder: (context, listViewIndex) {
+                                  final listViewUsersRecord =
+                                      listViewUsersRecordList[listViewIndex];
+                                  return MemberFeesTileWidget(
+                                    user: listViewUsersRecord,
                                   );
                                 },
-                              ),
-                            ),
-                          ],
+                              );
+                            },
+                          ),
                         ),
                       ),
                     ],

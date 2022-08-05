@@ -185,7 +185,7 @@ class _EditTeamBottomWidgetState extends State<EditTeamBottomWidget> {
               },
               text: 'Save',
               icon: FaIcon(
-                FontAwesomeIcons.solidSave,
+                FontAwesomeIcons.solidFloppyDisk,
               ),
               options: FFButtonOptions(
                 width: double.infinity,
