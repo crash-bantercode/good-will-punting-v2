@@ -132,6 +132,7 @@ class _EditTeamBottomWidgetState extends State<EditTeamBottomWidget> {
                     final teamsUpdateData = createTeamsRecordData(
                       teamName: textController1.text,
                       teamShortName: textController2.text,
+                      teamCode: widget.team.teamCode.split(':')[0] + ':' + textController2.text,
                     );
                     await widget.team.reference.update(teamsUpdateData);
                     Navigator.pop(context);
