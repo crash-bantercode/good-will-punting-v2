@@ -23,15 +23,13 @@ class DonateWidget extends StatefulWidget {
 class _DonateWidgetState extends State<DonateWidget> {
   DonationsRecord createdDonation;
   String uploadedFileUrl = '';
-  TextEditingController oddsController;
-  TextEditingController stakeController;
+  TextEditingController donationController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    oddsController = TextEditingController();
-    stakeController = TextEditingController();
+    donationController = TextEditingController();
   }
 
   @override
@@ -130,68 +128,10 @@ class _DonateWidgetState extends State<DonateWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                                 child: TextFormField(
-                                  controller: stakeController,
+                                  controller: donationController,
                                   obscureText: false,
                                   decoration: InputDecoration(
-                                    labelText: 'Stake',
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lexend Deca',
-                                          color: Color(0xFF95A1AC),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lexend Deca',
-                                          color: Color(0xFF95A1AC),
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.normal,
-                                        ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    contentPadding:
-                                        EdgeInsetsDirectional.fromSTEB(
-                                            20, 24, 20, 24),
-                                    prefixIcon: Icon(
-                                      Icons.attach_money_rounded,
-                                    ),
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .subtitle2
-                                      .override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: Color(0xFF0F1113),
-                                      ),
-                                  keyboardType:
-                                      const TextInputType.numberWithOptions(
-                                          signed: true, decimal: true),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                                child: TextFormField(
-                                  controller: oddsController,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelText: 'Odds',
+                                    labelText: 'Donation Amount',
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
@@ -345,24 +285,15 @@ class _DonateWidgetState extends State<DonateWidget> {
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     var _shouldSetState = false;
-                                    if (functions.validatePuntSubmit(
+                                    if (functions.validateDonationSubmit(
                                         uploadedFileUrl,
-                                        double.parse(stakeController.text),
-                                        double.parse(oddsController.text))) {
+                                        double.parse(donationController.text))) {
                                       final donationsCreateData =
                                           createDonationsRecordData(
                                         donationId: functions.increment(
-                                            donateClubsRecord.puntCount),
-                                        stake:
-                                            double.parse(stakeController.text),
-                                        odds: double.parse(oddsController.text),
-                                        winAmount: functions.multiply(
-                                            double.parse(stakeController.text),
-                                            double.parse(oddsController.text)),
-                                        donation: functions.getPercent(
-                                            double.parse(stakeController.text),
-                                            double.parse(oddsController.text),
-                                            10.0),
+                                            donateClubsRecord.puntCount),                                        
+                                        winAmount: double.parse(donationController.text) * 10, // Todo: this will come from settings
+                                        donation: double.parse(donationController.text),
                                         verified: false,
                                         season: donateClubsRecord.season,
                                         puntSlip: uploadedFileUrl,

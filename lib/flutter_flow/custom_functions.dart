@@ -29,16 +29,15 @@ int getIndex(int index) {
   return index + 1;
 }
 
-bool validatePuntSubmit(
+bool validateDonationSubmit(
   String img,
-  double stake,
-  double odds,
+  double donation,
 ) {
   var valid = true;
   if (img == null) {
     valid = false;
   }
-  if (stake == 0.0 || odds == 0.0) {
+  if (donation == 0.0) {
     valid = false;
   }
 
