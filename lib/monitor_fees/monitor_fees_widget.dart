@@ -116,7 +116,7 @@ class _MonitorFeesWidgetState extends State<MonitorFeesWidget> {
                           height: MediaQuery.of(context).size.height * 0.7,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
+                                .primaryBackground,
                           ),
                           child: StreamBuilder<List<UsersRecord>>(
                             stream: queryUsersRecord(

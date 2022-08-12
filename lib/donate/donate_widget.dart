@@ -261,7 +261,7 @@ class _DonateWidgetState extends State<DonateWidget> {
                                       MediaQuery.of(context).size.height * 0.25,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                        .primaryBackground,
                                   ),
                                   child: Visibility(
                                     visible: uploadedFileUrl != null &&
@@ -279,6 +279,8 @@ class _DonateWidgetState extends State<DonateWidget> {
                                 ),
                               ),
                               Spacer(),
+                              if (valueOrDefault<bool>(
+                                      uploadedFileUrl != '', false))
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),

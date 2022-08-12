@@ -271,9 +271,8 @@ class _DonationViewEditWidgetState extends State<DonationViewEditWidget> {
                                       .update(usersUpdateData);
 
                                   final teamsUpdateData = {
-                                    ...createTeamsRecordData(
-                                      seasonOverall: widget.donation.donation,
-                                    ),
+                                    'season_overall': FieldValue.increment(
+                                      widget.donation.donation),                                    
                                     'season_donations': FieldValue.increment(
                                         widget.donation.donation),
                                   };

@@ -216,7 +216,7 @@ class _PuntWidgetState extends State<PuntWidget> {
                                               0.4,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
+                                            .primaryBackground,
                                       ),
                                       child: Visibility(
                                         visible: uploadedFileUrl != null &&
@@ -238,6 +238,8 @@ class _PuntWidgetState extends State<PuntWidget> {
                                     ),
                                   ),
                                   Spacer(),
+                                  if (valueOrDefault<bool>(
+                                      uploadedFileUrl != '', false))
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0, 20, 0, 0),

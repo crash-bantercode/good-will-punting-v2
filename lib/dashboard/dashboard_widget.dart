@@ -13,6 +13,7 @@ import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class DashboardWidget extends StatefulWidget {
   const DashboardWidget({Key key}) : super(key: key);
@@ -23,6 +24,7 @@ class DashboardWidget extends StatefulWidget {
 
 class _DashboardWidgetState extends State<DashboardWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  PackageInfo packageInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -910,6 +912,15 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                               ),
                           ],
                         ),
+                      ),
+                      Spacer(),
+                      // Todo: this needs to read from pubspec
+                      Text(
+                        'v1.0.1',
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Lexend Deca',
+                              fontSize: 12,
+                            ),
                       ),
                     ],
                   );
